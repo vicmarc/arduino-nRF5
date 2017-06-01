@@ -89,6 +89,7 @@
             {"name": "Bluz DK"},
             {"name": "Generic nRF51822"},
             {"name": "Generic nRF52823"},
+            {"name": "Generic nRF52"},
             {"name": "OSHChip"},
             {"name": "ng-beacon"},
             {"name": "nRF51 Dongle"},
