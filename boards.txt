@@ -24,6 +24,42 @@ menu.board_variant=Board Variant
 # nRF52832 variants
 ###################
 
+Generic_nRF52.name=Generic-nRF52
+
+Generic_nRF52.upload.tool=sandeepmistry:openocd
+Generic_nRF52.upload.target=nrf52
+Generic_nRF52.upload.maximum_size=524288
+
+Generic_nRF52.bootloader.tool=sandeepmistry:openocd
+
+Generic_nRF52.build.mcu=cortex-m4
+Generic_nRF52.build.f_cpu=16000000
+Generic_nRF52.build.board=GENERIC
+Generic_nRF52.build.core=nRF5
+Generic_nRF52.build.variant=Generic-nRF52
+Generic_nRF52.build.variant_system_lib=
+Generic_nRF52.build.extra_flags=-DNRF52
+Generic_nRF52.build.float_flags=-mfloat-abi=hard -mfpu=fpv4-sp-d16
+Generic_nRF52.build.ldscript=nrf52_xxaa.ld
+
+Generic_nRF52.menu.softdevice.none=None
+Generic_nRF52.menu.softdevice.none.softdevice=none
+
+Generic_nRF52.menu.softdevice.s132=S132
+Generic_nRF52.menu.softdevice.s132.softdevice=s132
+Generic_nRF52.menu.softdevice.s132.softdeviceversion=2.0.1
+Generic_nRF52.menu.softdevice.s132.upload.maximum_size=409600
+Generic_nRF52.menu.softdevice.s132.build.extra_flags=-DNRF52 -DS132 -DNRF51_S132
+Generic_nRF52.menu.softdevice.s132.build.ldscript=armgcc_s132_nrf52832_xxaa.ld
+
+Generic_nRF52.menu.lfclk.lfxo=Crystal Oscillator
+Generic_nRF52.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+Generic_nRF52.menu.lfclk.lfrc=RC Oscillator
+Generic_nRF52.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+Generic_nRF52.menu.lfclk.lfsynt=Synthesized
+Generic_nRF52.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
+
+
 Generic_nRF52832.name=Generic nRF52
 
 Generic_nRF52832.upload.tool=sandeepmistry:openocd
